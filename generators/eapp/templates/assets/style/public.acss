@@ -1,0 +1,59 @@
+/*
+ * 基础通用样式库
+*/
+
+/* 初始化 */
+page{display:flex;color:#191F25;width:100%}
+.page-index{width:100%}
+*{box-sizing:border-box}
+view,text{line-height:1.4}
+.a-image{width:100%;height:100%}
+.background-size-full{background-size:100% 100% !important}
+/* 字间距 */
+.letter-spacing-2{letter-spacing:2rpx}
+/* 空行占位 E应用不支持空格和&nbsp; */
+.nbsp:before{content:'\00a0'}
+
+/*省略号*/
+.ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/*pre样式*/
+.pre{white-space: pre;}
+/*移除所有event*/
+.no-events{pointer-events:none}
+/* 头部固定 */
+.fixed-top{position:fixed;left:0;top:0}
+/* 底部固定 */
+.fixed-bottom{position:fixed;left:0;bottom:0}
+
+/* 下划线 */
+.transform-x-50{transform:translateX(-50%) !important}
+.transform-y-50{transform:translateY(-50%) !important}
+.transform-y-on-50{transform:translateY(50%) !important}
+.transform-translate-50{transform:translate(-50%,-50%)}
+
+/* 溢出显示省略号 */
+.over-ellipsis-1{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
+.over-ellipsis-2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.over-ellipsis-3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+
+/* 过渡transition */
+.transition{transition:.2s}
+/* 页面切换过渡 */
+.slide-left-enter,.slide-right-leave-active{opacity:0;-webkit-transform:translate(50rpx,0);transform:translate(50rpx,0)}
+.slide-left-leave-active,.slide-right-enter{opacity:0;-webkit-transform:translate(-50rpx,0);transform:translate(-50rpx,0)}
+
+/* iphoneX底部兼容 */
+@supports (bottom: env(safe-area-inset-bottom) !important) {
+	.page-index {
+		box-sizing: border-box;
+		padding-bottom: env(safe-area-inset-bottom) !important;
+	}
+	.fixed-bottom-wrap {
+		box-sizing: content-box;
+		padding-bottom: env(safe-area-inset-bottom) !important;
+	}
+}
+
+/*-----项目专有class start-----*/
+
+/*-----项目专有class end----- */
